@@ -51,6 +51,7 @@ public class ScriptUtils {
     public static final int SCRIPT_BULGARIAN = 18;
 
     public static final String LANGUAGE_GEORGIAN = "ka";
+    public static final String LANGUAGE_PERSIAN = "fa";
 
     private static final TreeMap<String, Integer> mLanguageCodeToScriptCode;
     private final static ArraySet<String> NON_UPPERCASE_SCRIPTS = new ArraySet<>();
@@ -79,6 +80,7 @@ public class ScriptUtils {
         mLanguageCodeToScriptCode.put("uk", SCRIPT_CYRILLIC);
 
         NON_UPPERCASE_SCRIPTS.add(LANGUAGE_GEORGIAN);
+        NON_UPPERCASE_SCRIPTS.add(LANGUAGE_PERSIAN);
     }
 
 

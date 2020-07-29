@@ -35,15 +35,31 @@
     <Key latin:keySpec="&#x0628;" />
     <!-- U+0644: "ل" ARABIC LETTER LAM -->
     <Key latin:keySpec="&#x0644;" />
-    <!-- U+0627: "ا" ARABIC LETTER ALEF
-         U+0671: "ٱ" ARABIC LETTER ALEF WASLA
-         U+0621: "ء" ARABIC LETTER HAMZA
-         U+0622: "آ" ARABIC LETTER ALEF WITH MADDA ABOVE
-         U+0623: "أ" ARABIC LETTER ALEF WITH HAMZA ABOVE
-         U+0625: "إ" ARABIC LETTER ALEF WITH HAMZA BELOW -->
-    <Key
-        latin:keySpec="&#x0627;"
-        latin:moreKeys="!fixedColumnOrder!5,&#x0671;,&#x0621;,&#x0622;,&#x0623;,&#x0625;" />
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabet|alphabetAutomaticShifted|alphabetShiftLocked">
+            <!-- U+0627: "ا" ARABIC LETTER ALEF
+                 U+0671: "ٱ" ARABIC LETTER ALEF WASLA
+                 U+0621: "ء" ARABIC LETTER HAMZA
+                 U+0622: "آ" ARABIC LETTER ALEF WITH MADDA ABOVE
+                 U+0623: "أ" ARABIC LETTER ALEF WITH HAMZA ABOVE
+                 U+0625: "إ" ARABIC LETTER ALEF WITH HAMZA BELOW -->
+            <Key
+                latin:keySpec="&#x0627;"
+                latin:keyHintLabel="&#x0622;"
+                latin:moreKeys="!fixedColumnOrder!5,&#x0671;,&#x0621;,&#x0622;,&#x0623;,&#x0625;" />
+        </case>
+
+        <default>
+            <!-- U+0622: "آ" ARABIC LETTER ALEF WITH MADDA ABOVE
+                 U+0671: "ٱ" ARABIC LETTER ALEF WASLA
+                 U+0621: "ء" ARABIC LETTER HAMZA
+                 U+0623: "أ" ARABIC LETTER ALEF WITH HAMZA ABOVE
+                 U+0625: "إ" ARABIC LETTER ALEF WITH HAMZA BELOW -->
+            <Key
+                latin:keySpec="&#x0622;"
+                latin:moreKeys="!fixedColumnOrder!5,&#x0671;,&#x0621;,&#x0623;,&#x0625;" />
+        </default>
+    </switch>
     <!-- U+062A: "ت" ARABIC LETTER TEH
          U+0629: "ة": ARABIC LETTER TEH MARBUTA -->
     <Key
@@ -53,11 +69,6 @@
     <Key latin:keySpec="&#x0646;" />
     <!-- U+0645: "م" ARABIC LETTER MEEM -->
     <Key latin:keySpec="&#x0645;" />
-    <!-- U+06A9: "ک" ARABIC LETTER KEHEH
-         U+0643: "ك" ARABIC LETTER KAF -->
-    <Key
-        latin:keySpec="&#x06A9;"
-        latin:moreKeys="&#x0643;" />
-    <!-- U+06AF: "گ" ARABIC LETTER GAF -->
-    <Key latin:keySpec="&#x06AF;" />
+    <!-- U+067E: "پ" ARABIC LETTER PEH -->
+    <Key latin:keySpec="&#x067E;" />
 </merge>
