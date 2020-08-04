@@ -18,10 +18,10 @@
 
 #include "jni_common.h"
 
-#include "org_dslul_openboard_inputmethod_keyboard_ProximityInfo.h"
-#include "org_dslul_openboard_inputmethod_latin_BinaryDictionary.h"
-#include "org_dslul_openboard_inputmethod_latin_BinaryDictionaryUtils.h"
-#include "org_dslul_openboard_inputmethod_latin_DicTraverseSession.h"
+#include "ir_lydia_keyboard_inputmethod_keyboard_ProximityInfo.h"
+#include "ir_lydia_keyboard_inputmethod_latin_BinaryDictionary.h"
+#include "ir_lydia_keyboard_inputmethod_latin_BinaryDictionaryUtils.h"
+#include "ir_lydia_keyboard_inputmethod_latin_DicTraverseSession.h"
 #include "defines.h"
 
 /*
