@@ -80,6 +80,7 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
             "pref_include_other_imes_in_language_switch_list";
     public static final String PREF_CUSTOM_INPUT_STYLES = "custom_input_styles";
     public static final String PREF_ENABLE_SPLIT_KEYBOARD = "pref_split_keyboard";
+    public static final String PREF_SHOW_NUMBER_ROW = "pref_show_number_row";
     public static final String PREF_KEYBOARD_HEIGHT_SCALE = "pref_keyboard_height_scale";
     public static final String PREF_SPACE_TRACKPAD = "pref_space_trackpad";
     public static final String PREF_DELETE_SWIPE = "pref_delete_swipe";
@@ -263,6 +264,10 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
         return Integer.parseInt(prefs.getString(PREF_KEY_PREVIEW_POPUP_DISMISS_DELAY,
                 Integer.toString(res.getInteger(
                         R.integer.config_key_preview_linger_timeout))));
+    }
+
+    public static boolean readShowNumberRow(final SharedPreferences prefs) {
+        return prefs.getBoolean(PREF_SHOW_NUMBER_ROW, true);
     }
 
     public static String readPrefAdditionalSubtypes(final SharedPreferences prefs,

@@ -38,6 +38,11 @@
         android:defaultValue="false"
         android:persistent="true" />
     <CheckBoxPreference
+        android:key="pref_show_number_row"
+        android:title="@string/show_number_row"
+        android:summary="@string/show_number_row_summary"
+        android:defaultValue="true" />
+    <CheckBoxPreference
         android:key="pref_resize_keyboard"
         android:title="@string/prefs_resize_keyboard"
         android:defaultValue="false"

@@ -128,6 +128,7 @@ public final class KeyboardLayoutSet {
         boolean mIsSplitLayoutEnabledByUser;
         // Indicates if split layout is actually enabled, taking into account
         // whether the user has enabled it, and the keyboard layout supports it.
+        boolean mShowNumberRow;
         boolean mIsSplitLayoutEnabled;
         // Sparse array of KeyboardLayoutSet element parameters indexed by element's id.
         final SparseArray<ElementParams> mKeyboardLayoutSetElementIdToParamsMap =
@@ -334,6 +335,11 @@ public final class KeyboardLayoutSet {
 
         public Builder setSplitLayoutEnabledByUser(final boolean enabled) {
             mParams.mIsSplitLayoutEnabledByUser = enabled;
+            return this;
+        }
+
+        public Builder setShowNumberRow(final boolean enabled) {
+            mParams.mShowNumberRow = enabled;
             return this;
         }
 
