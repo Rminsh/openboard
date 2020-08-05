@@ -20,6 +20,7 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.view.MenuItem;
 
 import ir.lydia.keyboard.inputmethod.latin.permissions.PermissionsManager;
 import ir.lydia.keyboard.inputmethod.latin.utils.FragmentUtils;
@@ -36,8 +37,6 @@ public final class SettingsActivity extends PreferenceActivity
     public static final String EXTRA_ENTRY_VALUE_NOTICE_DIALOG = "important_notice";
     public static final String EXTRA_ENTRY_VALUE_SYSTEM_SETTINGS = "system_settings";
 
-    private boolean mShowHomeAsUp;
-
     @Override
     protected void onCreate(final Bundle savedState) {
         super.onCreate(savedState);
@@ -46,6 +45,15 @@ public final class SettingsActivity extends PreferenceActivity
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            super.onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
